@@ -1,0 +1,16 @@
+#story {
+    color: white;
+    background-color: white;
+}
+
+.input-label {
+    width: 70px;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+.descriptor {
+    font-weight: bold;
+}

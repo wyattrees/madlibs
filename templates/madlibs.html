@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block link_css %}
+<link rel="stylesheet" href="{{css_url}}">
+{% endblock link_css %}
+{% block scripts %}
+<script type='text/javascript' src="{{js_url}}"></script>
+{% endblock scripts %}
+{% block meta %}
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+{% endblock meta %}
+{% block title %}
+<title>MADLIBS</title>
+{% endblock title %}
+{% block content %}
+<div id=descriptor-entry>
+    {% for d in descriptors %}
+        <div class='input-label'>{{d}}:</div><input class='word-input' type=text><br>
+    {% endfor %}
+    <div id='submit-descriptors'>
+        <input type=button value='Submit' id='submit-words'>
+    </div>
+</div>
+<div id=story>
+    {% for word in words %}
+        {{word}}
+    {% endfor %}
+</div>
+{% endblock content %}
